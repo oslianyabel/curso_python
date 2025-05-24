@@ -58,6 +58,6 @@
 
     pip install -r requirements.txt
 
-*Linux o Mac**
+*Linux o Mac*
 
     pip3 install -r requirements.txt
