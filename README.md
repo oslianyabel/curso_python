@@ -27,32 +27,37 @@
         - console.plataformia.com
         - Telegram
 
-## **Inicio rápido**
+## **Inicio rápido 🚀**
 
 ### 1- Clona el repositorio 
 
-`git clone https://github.com/oslianyabel/curso_python.git`
+    git clone https://github.com/oslianyabel/curso_python.git
 
-### 2- Crea y activa un entorno virtual
+### 2- Crear un entorno virtual
 
 *Windows* 
 
-`python -m venv venv`
+    python -m venv venv
+    
+*Linux o Mac*
 
-`venv\Scripts\activate`
+    `python3 -m venv venv`
+
+### 3- Activa el entorno virtual
+*Windows* 
+
+    venv\Scripts\activate
 
 *Linux o Mac*
 
-`python3 -m venv venv`
+    source venv/bin/activate
 
-`source venv/bin/activate`
-
-### 3- Instala las bibliotecas necesarias
+### 4- Instala las bibliotecas necesarias
 
 *Windows* 
 
-`pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 *Linux o Mac**
 
-`pip3 install -r requirements.txt`
+    pip3 install -r requirements.txt
