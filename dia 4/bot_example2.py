@@ -1,6 +1,15 @@
 from bot import bot
 from utils import load_file
 
+"""
+Recuerden los mensajes del usuario son procesados solo por la primera funcion de arriba hacia abajo que cumpla con el decorador
+Errores comunes:
+- usen este decorador solo para la ultima función: @bot.message_handler(func=lambda message: True) De lo contrario nunca se procesarán funciones definidas debajo de esta
+- No pueden definir 2 funciones con el mismo nombre
+- Comprueben que se esté cargando el token correctamente
+- Los comandos no pueden contener espacios
+"""
+
 
 @bot.message_handler(content_types=["document", "photo", "audio", "video", "voice"])
 def handle_files(message):

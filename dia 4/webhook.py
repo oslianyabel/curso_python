@@ -17,7 +17,7 @@ users = {
         "warnings": 0,
     }
 }
-ADMINS = [1138837437] # ids de chats de usuarios administradores
+ADMINS = [1138837437]  # ids de chats de usuarios administradores
 
 WEBHOOK_URL = "https://f664-138-199-50-144.ngrok-free.app/webhook"  # Cambia esto por tu URL pública de render o de ngrok
 WEBHOOK_PORT = 5000  # O el puerto que uses

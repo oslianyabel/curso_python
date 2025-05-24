@@ -1,6 +1,14 @@
+from bot import bot
 from telebot import types
 
-from bot import bot
+"""
+Recuerden los mensajes del usuario son procesados solo por la primera funcion de arriba hacia abajo que cumpla con el decorador
+Errores comunes:
+- usen este decorador solo para la ultima función: @bot.message_handler(func=lambda message: True) De lo contrario nunca se procesarán funciones definidas debajo de esta
+- No pueden definir 2 funciones con el mismo nombre
+- Comprueben que se esté cargando el token correctamente
+- Los comandos no pueden contener espacios
+"""
 
 
 # vias para enviar un msg
@@ -8,10 +16,11 @@ from bot import bot
 def send_welcome(message):
     bot.send_chat_action(message.chat_id, "typing")
 
+    # 2 formas de enviar un msg
     bot.reply_to(message, "Hello World")
-
     bot.send_message(message.chat_id, "Hello World")
 
+    # envio de msgs con formatos especiales
     """
     *Negrita*
     _Cursiva_
@@ -28,12 +37,14 @@ def send_welcome(message):
     """
     bot.send_message(message.chat_id, "<b>Hello World</b>", parse_mode="HTML")
 
+    # envio de teclado
     markup = types.ReplyKeyboardMarkup(row_width=3)
     btn1 = types.KeyboardButton("Option1")
     btn2 = types.KeyboardButton("Option2")
     markup.add(btn1, btn2)
     bot.send_message(message.chat.id, "Elige una opción:", reply_markup=markup)
 
+    # envio de botonera
     markup = types.InlineKeyboardMarkup()
     btn1 = types.InlineKeyboardButton("Google", url="https://google.com")
     btn2 = types.InlineKeyboardButton("Presióname", callback_data="btn_pressed")

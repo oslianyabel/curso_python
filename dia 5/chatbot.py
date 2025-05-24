@@ -2,7 +2,7 @@ import json
 import os
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI  # Documentacion: https://platform.openai.com/docs/overview
 
 load_dotenv()
 

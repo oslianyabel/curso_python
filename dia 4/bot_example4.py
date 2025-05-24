@@ -4,6 +4,16 @@ from datetime import datetime
 
 from bot import bot
 
+"""
+Recuerden los mensajes del usuario son procesados solo por la primera funcion de arriba hacia abajo que cumpla con el decorador
+Errores comunes:
+- usen este decorador solo para la ultima función: @bot.message_handler(func=lambda message: True) De lo contrario nunca se procesarán funciones definidas debajo de esta
+- No pueden definir 2 funciones con el mismo nombre
+- Comprueben que se esté cargando el token correctamente
+- Los comandos no pueden contener espacios
+"""
+
+# Las claves de este diccionario son los id de los chats del bot con cada usuario
 users = {
     123456: {
         "first_name": "Juan",
@@ -15,7 +25,7 @@ users = {
         "warnings": 0,
     }
 }
-ADMINS = [123456, 789012]
+ADMINS = [123456, 789012]  # ids de chats de usuarios administradores
 
 
 def save_users():
