@@ -1,5 +1,6 @@
-from bot import bot
 from telebot import types
+
+from bot import bot
 
 """
 Recuerden los mensajes del usuario son procesados solo por la primera funcion de arriba hacia abajo que cumpla con el decorador
@@ -62,3 +63,10 @@ def handle_callback(call):
 @bot.edited_message_handler(func=lambda message: True)
 def handle_edited_messages(message):
     bot.reply_to(message, "Editaste el mensaje")
+
+
+if __name__ == "__main__":
+    bot.delete_webhook()
+    print("Bot Ready!")
+    bot.polling()
+    print("Bot Stopped!")

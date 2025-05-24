@@ -63,3 +63,10 @@ def reenviar_archivo(message):
     bot.send_photo(chat_id, file_id)
     bot.send_audio(chat_id, file_id)
     bot.send_video(chat_id, file_id)
+
+
+if __name__ == "__main__":
+    bot.delete_webhook()
+    print("Bot Ready!")
+    bot.polling()
+    print("Bot Stopped!")

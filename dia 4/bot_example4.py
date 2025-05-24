@@ -125,4 +125,7 @@ def list_users(message):
 
 
 if __name__ == "__main__":
+    bot.delete_webhook()
+    print("Bot Ready!")
     bot.polling()
+    print("Bot Stopped!")

@@ -60,3 +60,10 @@ def handle_group_messages(message):
         bot.reply_to(message, "¡Mensaje recibido en un canal!")
     else:
         bot.reply_to(message, "¡Mensaje en chat privado!")
+
+
+if __name__ == "__main__":
+    bot.delete_webhook()
+    print("Bot Ready!")
+    bot.polling()
+    print("Bot Stopped!")
