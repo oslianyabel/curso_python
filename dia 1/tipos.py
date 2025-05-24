@@ -1,0 +1,9 @@
+num: int = 5
+num2: float = 5.5
+text: str = "Hello World"
+ok: bool = True # expresión lógica
+notas: tuple = (5, 4, 5, 3)  # inmutable
+compras: list = ["tomate", "frijoles", "huevo"]
+agenda: dict = {"Pedro": "52098956", "Juan": "52780945"}
+bin: bytes = b"Hola"
+vacio = None

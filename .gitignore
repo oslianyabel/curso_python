@@ -1,6 +1,6 @@
 __pycache__/
 ejemplo.txt
-dia 1/
-dia 2/
 venv/
 records.log*
+.env
+venv/
