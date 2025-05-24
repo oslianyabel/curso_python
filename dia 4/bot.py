@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-class MyBot(telebot.Telebot):
+class MyBot(telebot.TeleBot):
     def send_message(self, chat_id, text, **kwargs):
         self.send_chat_action(chat_id, "typing")
         return super().send_message(chat_id, text, **kwargs)

@@ -2,20 +2,21 @@ import json
 import os
 
 from dotenv import load_dotenv
-from openai import OpenAI
-
 from json_tools import json_tools
+from openai import OpenAI
 
 load_dotenv()
 
-AVANGENIO_API_KEY = os.getenv("AVANGENIO_API_KEY") # recuerda porner esta variable dentro de .env
+AVANGENIO_API_KEY = os.getenv(
+    "AVANGENIO_API_KEY"
+)  # recuerda porner esta variable dentro de .env
 
 client = OpenAI(api_key=AVANGENIO_API_KEY, base_url="https://apigateway.avangenio.net")
-
+prompt = "Eres un profesor de Python. Ayuda a los usuarios con sus dudas. Refuerza las respuestas con ejemplos de código y las frases con emojis"
 msg_list = [
     {
         "role": "system",
-        "content": "Eres un profesor de Python. Ayuda a los usuarios con sus dudas",
+        "content": prompt,
     }
 ]
 MODEL = "agent-md"
@@ -26,7 +27,7 @@ def get_weather(location):
 
 
 print(
-    "Hola, pregúntame alguna duda sobre Python o la temperatura de alguna ciudad para ejecutar function calling. Escribe 'salir' para salir"
+    "Hola! Preguntame sobre la temperatura de una ciudad para probar las llamadas a funciones. También puedes crear tus propias funciones y agregarlas al bot. Escribe 'salir' para salir"
 )
 while True:
     question = input()

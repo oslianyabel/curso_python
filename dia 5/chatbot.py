@@ -16,8 +16,8 @@ class Completions:
         self,
         api_key,
         name="curso_python_bot",
-        model="agent-md", # ver en plataformia más modelos
-        json_tools=[], 
+        model="agent-md",  # ver en plataformia más modelos
+        json_tools=[],
         functions={},
         tool_choice="auto",
     ):
@@ -92,12 +92,14 @@ class Completions:
 ia = Completions(AVANGENIO_API_KEY)
 
 if __name__ == "__main__":
+    prompt = "Eres un profesor de Python. Ayuda a los usuarios con sus dudas. Refuerza las respuestas con ejemplos de código y las frases con emojis"
     msg_list = [
         {
             "role": "system",
-            "content": "Eres un profesor de Python. Ayuda a los usuarios con sus dudas",
+            "content": prompt,
         }
     ]
+    print("Hola, pregúntame algo sobre Python o escribe 'salir' para salir")
     while True:
         question = input()
         if question == "salir":
