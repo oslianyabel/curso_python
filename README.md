@@ -1,6 +1,6 @@
 # Curso de Python🐍
 
-## **Temas**
+## **Temas 📌**
     1- Sintaxis y conceptos básicos del lenguaje:
 
     2- Tópicos intermedios: (decoradores, recursividad, comprensión de listas, desempaquetado de listas y diccionarios, serializacion y deserialización de json, variables de entorno, gestión de logs y buenas prácticas de POO)
@@ -13,7 +13,7 @@
 
     6- Implementación de chatbots con IA
 
-## **Requisitos**
+## **Requisitos ✅**
     1- Conocimientos previos de lógica de programación
     2- Tener instalado en su PC:
         - Python
