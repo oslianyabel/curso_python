@@ -1,7 +1,7 @@
 # Curso de Python🐍
 
 ## **Temas 📌**
-    1- Sintaxis y conceptos básicos del lenguaje:
+    1- Sintaxis y conceptos básicos del lenguaje
 
     2- Tópicos intermedios: (decoradores, recursividad, comprensión de listas, desempaquetado de listas y diccionarios, serializacion y deserialización de json, variables de entorno, gestión de logs y buenas prácticas de POO)
 
